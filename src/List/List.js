@@ -1,32 +1,16 @@
 import React from 'react';
-import list from '../List/list.css'
+import list from './list.css'
 import Card from '../Card/Card'
-
-/* class List extends React.Component  {
-  static defaultProps = {
-    store: {
-      header,
-      cards,
-    }
-  }
-
-  render() {
-  return (
-    <section className="List">
-      <header className="List-header">{props.header}</header>
-      <div className="List-cards">{props.cards}</div>
-    </section>
-  )};
-} */
 
 function List(props){
   return (
-  <section className="List"> 
+  <section className="List">
     <header className="List-header">{props.header}</header>
     <div className="List-cards">{props.cards}</div>
-    <Card />
-  </section> 
-  )
-};
+    <Card 
+    title="this is a title"
+    content="this is content"/>
+  </section>
+  )}
 
-export default List;
+export default List 

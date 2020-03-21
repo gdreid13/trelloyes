@@ -1,14 +1,12 @@
 import React from 'react';
 import List from './List/List';
-import STORE from './STORE';
+import STORE from './store';
 
 class App extends React.Component {
   static defaultProps = {
-    STORE: {
-      lists: [],
-      allCards: {},
+    STORE: STORE
     }
-  }
+
    render() {
     return (
       <main className='App'>
@@ -16,7 +14,10 @@ class App extends React.Component {
           <h1>Trelloyes!</h1>
         </header>
         <div className="App-List">
-          <List />
+          <List 
+          header="headers"
+          cardIds = {STORE.lists[0].cardIds}
+          allCards = {STORE.allCards}/>
         </div>
       </main>
     );

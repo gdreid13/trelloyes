@@ -1,19 +1,26 @@
 import React from 'react';
-import List from './List/List'
+import List from './List/List';
+import STORE from './STORE';
 
-
-function App(props) {
-  return (
-    <main className='App'>
-      <header className="App-header">
-        <h1>Trelloyes!</h1>
-      </header>
-      <div className="App-List">
-        {props.list}
-        {props.allCards}
-      </div>
-    </main>
-  );
+class App extends React.Component {
+  static defaultProps = {
+    STORE: {
+      lists: [],
+      allCards: {},
+    }
+  }
+   render() {
+    return (
+      <main className='App'>
+        <header className="App-header">
+          <h1>Trelloyes!</h1>
+        </header>
+        <div className="App-List">
+          <List />
+        </div>
+      </main>
+    );
+  }
 }
 
 export default App;

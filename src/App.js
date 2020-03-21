@@ -1,11 +1,17 @@
 import React from 'react';
-/* import Card from './src/Card.js';
-import STORE from './src/store.js'; */
+import List from './List/List'
 
-function App() {
+
+function App(props) {
   return (
     <main className='App'>
-      Card(props);
+      <header className="App-header">
+        <h1>Trelloyes!</h1>
+      </header>
+      <div className="App-List">
+        {props.list}
+        {props.allCards}
+      </div>
     </main>
   );
 }

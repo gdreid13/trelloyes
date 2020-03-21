@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from 'Card.css';
+import './card.css';
 
 /* class CardClass extends React.Component  {
     static defaultProps = {
@@ -19,7 +19,7 @@ import Card from 'Card.css';
 
 function Card(props) {
     return (
-        <div className="card">
+        <div className="Card">
             <h3>{props.title}</h3>
             <p>{props.content}</p>
         </div>

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component snapshot of list 1`] = `
+<section
+  className="List"
+>
+  <header
+    className="List-header"
+  >
+    header
+  </header>
+  <div
+    className="List-cards"
+  >
+    <div
+      className="Card"
+    >
+      <h3>
+        First card
+      </h3>
+      <p>
+        lorem ipsum
+      </p>
+    </div>
+    <div
+      className="Card"
+    >
+      <h3>
+        Second card
+      </h3>
+      <p>
+        lorem ipsum
+      </p>
+    </div>
+    <div
+      className="Card"
+    >
+      <h3>
+        Third card
+      </h3>
+      <p>
+        lorem ipsum
+      </p>
+    </div>
+  </div>
+</section>
+`;

@@ -1,6 +1,7 @@
 import React from 'react';
 import './list.css';
 import Card from './Card'
+import STORE from './store';
 
 function List(props){
   const cards = props.cardIds.map(cardId =>
@@ -17,5 +18,11 @@ function List(props){
   </section>
   )
 };
+
+List.defaultProps = {
+  header : "header",
+  cardIds : ['a', 'b', 'c'],
+  allCards : STORE.allCards,
+}
 
 export default List;

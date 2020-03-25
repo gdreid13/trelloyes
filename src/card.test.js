@@ -3,7 +3,15 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer'
 import Card from './Card';
 
-it ('snapshot of card <Card />', () => {
-  const snap = renderer.create(<Card props={[]}/>).toJSON();
-  expect(snap).toMatchSnapshot();
+describe('Card component', () => {
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<Card />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+
+  it ('snapshot of card', () => {
+    const snap = renderer.create(<Card />).toJSON();
+    expect(snap).toMatchSnapshot();
+  });
 });

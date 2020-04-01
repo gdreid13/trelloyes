@@ -4,11 +4,10 @@ import Card from './Card'
 import STORE from './store';
 
 function List(props) {
-  console.log(props.store.lists.map);
-  const cards = props.store.lists.map(cardId =>
+  console.log(props)
+  const cards = props.cardIds.map(cardId =>
     <Card 
-        title = {cardId.title}
-        content = {cardId.content}
+        cardId = {cardId}
         key = {cardId.id}
     />
   );

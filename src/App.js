@@ -20,14 +20,14 @@ class App extends React.Component {
   }
   
    render() {
-/*     const lists = STORE.lists.map(listObject =>
+    const lists = this.state.store.lists.map(listObject =>
       <List
         header = {listObject.header}
         cardIds = {listObject.cardIds}
         allCards = {STORE.allCards}
         key = {listObject.id}
       />
-      ); */
+      ); 
     console.log(this.state.store);
     return (
       <main className='App'>
@@ -35,9 +35,8 @@ class App extends React.Component {
           <h1>Trelloyes!</h1>
         </header>
         <div className="App-list">
-          <List
-            store={this.state.store}
-          />
+          {lists}
+          
         </div>
       </main>
     );

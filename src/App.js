@@ -60,7 +60,6 @@ class App extends React.Component {
         handleAddRandomButton = {this.handleAddRandomButton}
       />
       ); 
-    console.log(this.state.store);
     return (
       <main className='App'>
         <header className="App-header">

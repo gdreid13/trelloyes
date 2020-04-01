@@ -18,7 +18,6 @@ import './card.css';
 } */
 
 function Card(props) {
-    console.log(props)
     return (
         <div className="Card">
             <h3>{props.card.title}</h3>

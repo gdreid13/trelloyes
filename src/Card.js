@@ -21,8 +21,9 @@ function Card(props) {
     console.log(props)
     return (
         <div className="Card">
-            <h3>{props.cardId.title}</h3>
-            <p>{props.cardId.content}</p>
+            <h3>{props.card.title}</h3>
+            <p>{props.card.content}</p>
+            <button onClick={e => props.handleDeleteButton(props.card.id)}>Delete</button>
         </div>
     );
 }

@@ -4,11 +4,12 @@ import Card from './Card'
 import STORE from './store';
 
 function List(props) {
-  console.log(props)
   const cards = props.cardIds.map(cardId =>
     <Card 
         cardId = {cardId}
         key = {cardId.id}
+        title = {props.allCards.cardId.title}
+        content = {props.allCards.cardId.content}
     />
   );
   return (

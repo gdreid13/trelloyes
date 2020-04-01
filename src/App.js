@@ -28,7 +28,6 @@ class App extends React.Component {
         key = {listObject.id}
       />
       ); 
-    console.log(this.state.store);
     return (
       <main className='App'>
         <header className="App-header">

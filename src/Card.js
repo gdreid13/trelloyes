@@ -18,11 +18,10 @@ import './card.css';
 } */
 
 function Card(props) {
-    console.log(props)
     return (
         <div className="Card">
-            <h3>{props.cardId.title}</h3>
-            <p>{props.cardId.content}</p>
+            <h3>{props.title}</h3>
+            <p>{props.content}</p>
         </div>
     );
 }

@@ -3,12 +3,13 @@ import './list.css';
 import Card from './Card'
 import STORE from './store';
 
-function List(props){
-  const cards = props.cardIds.map(cardId =>
+function List(props) {
+  console.log(props.store.lists.map);
+  const cards = props.store.lists.map(cardId =>
     <Card 
-        title = {props.allCards[cardId].title}
-        content = {props.allCards[cardId].content}
-        key = {cardId}
+        title = {cardId.title}
+        content = {cardId.content}
+        key = {cardId.id}
     />
   );
   return (

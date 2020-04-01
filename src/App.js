@@ -4,25 +4,40 @@ import STORE from './store';
 import './App.css';
 
 class App extends React.Component {
-  static defaultProps = {
-    store: STORE
+  constructor() {
+    super();
+    this.state = {
+      store: STORE
     }
+  }
+
+  handleDeleteButton = () => {
+
+  }
+
+  handleAddRandomButton = () => {
+    
+  }
+  
    render() {
-    const lists = STORE.lists.map(listObject =>
+/*     const lists = STORE.lists.map(listObject =>
       <List
         header = {listObject.header}
         cardIds = {listObject.cardIds}
         allCards = {STORE.allCards}
         key = {listObject.id}
       />
-      );
+      ); */
+    console.log(this.state.store);
     return (
       <main className='App'>
         <header className="App-header">
           <h1>Trelloyes!</h1>
         </header>
         <div className="App-list">
-          {lists}
+          <List
+            store={this.state.store}
+          />
         </div>
       </main>
     );

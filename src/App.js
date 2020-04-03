@@ -20,6 +20,7 @@ function omit(obj, keyToOmit) {
     {}
   );
 }
+
 class App extends Component {
 
   state = {
@@ -49,10 +50,10 @@ class App extends Component {
 
     const newLists = this.state.store.lists.map(list => {
       if (list.id === listId) {
-	return {
-          ...list,
-          cardIds: [...list.cardIds, newCard.id]
-        };
+        return {
+                ...list,
+                cardIds: [...list.cardIds, newCard.id]
+              };
       }
       return list;
     })

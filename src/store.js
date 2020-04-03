@@ -18,7 +18,7 @@ const STORE = {
       {
         id: '4',
         header: 'Fourth list',
-        cardIds: [ 'l', 'm' ],
+        cardIds: [ 'l', 'm', 'z'],
       },
     ],
     allCards: {
@@ -33,6 +33,7 @@ const STORE = {
       'i': { id: 'i', title: 'Ninth card', content: 'lorem ipsum' },
       'j': { id: 'j', title: 'Tenth card', content: 'lorem ipsum' },
       'k': { id: 'k', title: 'Eleventh card', content: 'lorem ipsum' },
+      'z': { id: 'z', title: 'Eleventh card', content: 'lorem ipsum' },
       'l': { id: 'l', title: 'Twelfth card', content: 'lorem ipsum' },
       'm': { id: 'm', title: 'Thirteenth card', content: 'lorem ipsum' },
     },

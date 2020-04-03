@@ -15,6 +15,14 @@ export default function Card(props) {
     )
   }
 
+        <div className="Card">
+            <h3>{props.card.title}</h3>
+            <p>{props.card.content}</p>
+            <button onClick={e => props.handleDeleteButton(props.card.id)}>Delete</button>
+        </div>
+    );
+}
+
 Card.propTypes = {
     onClickDelete: () => {}
 }

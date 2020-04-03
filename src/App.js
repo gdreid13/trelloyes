@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import List from './List';
 import STORE from './store';
 import './App.css';
@@ -20,13 +20,11 @@ function omit(obj, keyToOmit) {
     {}
   );
 }
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      store: STORE
-    }
-  }
+class App extends Component {
+
+  state = {
+    store: STORE,
+  };
 
   handleDeleteCard = (cardId) => {
     const { lists, allCards } = this.state.store;
@@ -70,25 +68,24 @@ class App extends React.Component {
     })
   };
   
-   render() {
-    const lists = this.state.store.lists.map(listObject =>
-      <List
-        header = {listObject.header}
-        cardIds = {listObject.cardIds}
-        allCards = {STORE.allCards}
-        key = {listObject.id}
-        onClickDelete = {this.handleDeleteCard}
-        onClickAdd = {this.handleAddCard}
-      />
-      ); 
+   render () {
+    const { store } = this.state;
     return (
       <main className='App'>
-        <header className="App-header">
+        <header className='App-header'>
           <h1>Trelloyes!</h1>
         </header>
-        <div className="App-list">
-          {lists}
-          
+        <div className='App-list'>
+          {store.lists.map(list => (
+            <List
+              key={list.id}
+              id={list.id}
+              header={list.header}
+              cards={list.cardIds.map(id => store.allCards[id])}
+              onClickDelete={this.handleDeleteCard}
+              onClickAdd={this.handleAddCard}
+            />
+          ))}
         </div>
       </main>
     );
